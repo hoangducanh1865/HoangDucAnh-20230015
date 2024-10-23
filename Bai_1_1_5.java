@@ -11,12 +11,15 @@ public class Bai_1_1_5 {
         System.out.print("Nhap vao so thu hai: ");
         double num2 = sc.nextDouble();
 
-        System.out.println("Tong cua hai so vua nhap bang: " + (num1 + num2));
-        System.out.println("Hieu cua hai so vua nhap bang: " + (num1 - num2));
-        System.out.println("Tich cua hai so vua nhap bang: " + (num1 * num2));
+        System.out.printf("Tong cua hai so vua nhap bang: %.4f%n", (num1 + num2));
+        System.out.printf("Hieu cua hai so vua nhap bang: %.4f%n", (num1 - num2));
+        System.out.printf("Tich cua hai so vua nhap bang: %.4f%n", (num1 * num2));
         System.out.print("Thuong cua hai so vua nhap bang: ");
-        if(num2 == 0) System.out.println("INFINITE NUMBER");
-        else System.out.println(num1 / num2);
+        if(num2 == 0) {
+            System.out.println("INFINITE NUMBER");
+        } else {
+            System.out.printf("%.4f%n", num1 / num2);
+        }
 
         sc.close();
     }
