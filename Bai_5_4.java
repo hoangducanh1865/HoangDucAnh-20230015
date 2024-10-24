@@ -23,15 +23,18 @@ public class Bai_5_4 {
         if (month.charAt(0) < '0' || month.charAt(0) > '9') { // The first character is not a digit
             for (int i = 0; i < 12; i++) {
                 if (month.equals(monthName1[i])) {
-                    if (i + 1 == 2 && yearNumber % 4 == 0) System.out.println(29);
-                    else System.out.println(daysInMonth[i]);
+                    if (i + 1 == 2 && ((yearNumber % 4 == 0 && yearNumber % 100 != 0) || yearNumber % 400 == 0)) {
+                        System.out.println(29);
+                    } else System.out.println(daysInMonth[i]);
                 }
                 if (month.equals(monthName2[i])) {
-                    if (i + 1 == 2 && yearNumber % 4 == 0) System.out.println(29);
+                    if (i + 1 == 2 && ((yearNumber % 4 == 0 && yearNumber % 100 != 0) || yearNumber % 400 == 0))
+                        System.out.println(29);
                     else System.out.println(daysInMonth[i]);
                 }
                 if (month.equals(monthName3[i])) {
-                    if (i + 1 == 2 && yearNumber % 4 == 0) System.out.println(29);
+                    if (i + 1 == 2 && ((yearNumber % 4 == 0 && yearNumber % 100 != 0) || yearNumber % 400 == 0))
+                        System.out.println(29);
                     else System.out.println(daysInMonth[i]);
                 }
             }
