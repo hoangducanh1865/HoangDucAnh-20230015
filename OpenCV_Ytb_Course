@@ -1,0 +1,113 @@
+# BAI 2
+# import cv2
+# import os
+#
+# path = "/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /meo.jpg"
+# path1 = "/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /"
+#
+# img = cv2.imread(path)
+#
+# # cv2.imshow("tai anh", img)
+#
+# os.chdir(path1)
+#
+# fileName = "con meo.png"
+# cv2.imwrite(fileName, img)
+# print("thanh cong")
+#
+# cv2.waitKey(5000)
+from sys import thread_info
+
+# BAI 3
+# import cv2
+#
+# path = "/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /kgm.png"
+# image = cv2.imread(path)
+# B, G, R = cv2.split(image)
+#
+# cv2.imshow("image", image)
+# cv2.imshow("B", B)
+# cv2.imshow("G", G)
+# cv2.imshow("R", R)
+#
+# cv2.waitKey()
+
+
+
+# BAI 4
+# import cv2
+#
+# path1 = r"/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /meo 1.png"
+# path2 = r"/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /meo 2.png"
+#
+# img1 = cv2.imread(path1)
+# img2 = cv2.imread(path2)
+#
+# desk_and = cv2.bitwise_not(img1, mask=None)
+#
+# # cv2.imshow("img1", img1)
+# # cv2.imshow("img2", img2)
+# cv2.imshow("desk_and", desk_and)
+#
+# if cv2.waitKey(0) & 0xFF == 27:
+#     cv2.destroyAllWindows()
+
+
+
+
+# BAI 5
+# import cv2
+#
+# path = "/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /meo 1.png"
+#
+# img = cv2.imread(path)
+
+# img[213, 213] = [100, 100, 100]
+
+# b = img[:, :, 0]
+
+# b, g, r = cv2.split(img)
+
+# a = img[100:200, 100:200]
+# img[50:150, 50:150] = a
+
+# print(img.shape)
+# print(img.size)
+# print(img.dtype)
+# cv2.imshow("con meo", img)
+#
+# if cv2.waitKey(0) & 0xFF == 27:
+#     cv2.destroyAllWindows()
+
+
+
+# BAI 6
+import cv2
+
+path = "/Users/hoangducanh/Library/Mobile Documents/com~apple~CloudDocs/CNTT/OpenCV /meo 1.png"
+
+img = cv2.imread(path)
+
+# start_point = (100, 100)
+# end_point = (300, 300)
+# coler = (0, 0, 255)
+# thickness = 7
+# img = cv2.rectangle(img, start_point, end_point, coler, thickness)
+
+# center = (300, 300)
+# radius = 100
+# color = (0, 255, 0)
+# thickness = 2
+# img = cv2.circle(img, center, radius, color, thickness)
+
+font = cv2.FONT_HERSHEY_SIMPLEX
+org = (100, 100)
+color = (100, 100, 100)
+fontScale = 1
+thickness = 2
+img = cv2.putText(img, "OpenCV", org, font, fontScale, color, thickness)
+
+cv2.imshow("img", img)
+
+if cv2.waitKey(0) & 0xFF == 27:
+    cv2.destroyAllWindows()
